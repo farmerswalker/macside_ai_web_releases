@@ -19,15 +19,18 @@ class LandingPage extends StatelessWidget {
             const CustomText(text: 'MacSide AI', fontWeight: FontWeight.bold),
         centerTitle: false,
         actions: [
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 18),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100),
-              color: Colors.black87,
-            ),
-            child: const CustomText(
-              text: 'macOS版をダウンロード',
-              color: Colors.white,
+          GestureDetector(
+            onTap: () => downloadMacSideAI(),
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 18),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                color: Colors.black87,
+              ),
+              child: const CustomText(
+                text: 'macOS版をダウンロード',
+                color: Colors.white,
+              ),
             ),
           ),
           const SizedBox(width: 18),
